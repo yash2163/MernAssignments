@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .link-container {
+        border: 1px solid black;
+        padding: 10px;
+        background-color: #c0c0c0;
+        width: fit-content;
+        margin: 20px;
+      }
+
+      .link-container a {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="link-container">
+      <p>Click any of the following links</p>
+      <a href="https://www.example.com" target="_blank">Opens in New</a> |
+      <a href="https://www.example.com" target="_self">Opens in Self</a> |
+      <a href="https://www.example.com" target="_parent">Opens in Parent</a> |
+      <a href="https://www.example.com" target="_top">Opens in Body</a> |
+      <a href="mailto:someone@example.com">Send email</a>
+    </div>
+  </body>
+</html>

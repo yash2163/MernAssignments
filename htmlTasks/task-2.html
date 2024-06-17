@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .nested-list {
+        border: 1px solid black;
+        padding: 10px;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nested-list">
+      <p>Lists can be nested (list inside list):</p>
+      <ul>
+        <li>Coffee</li>
+        <li>
+          Tea
+          <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+          </ul>
+        </li>
+        <li>Milk</li>
+      </ul>
+    </div>
+  </body>
+</html>

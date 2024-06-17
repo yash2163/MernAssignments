@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 600px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        display: flex;
+        margin-bottom: 15px;
+        align-items: center;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      input[type="tel"],
+      select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .checkbox-group label,
+      .radio-group label {
+        font-weight: normal;
+      }
+
+      .agree-group {
+        display: flex;
+        align-items: center;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <h2>Registration Form</h2>
+
+        <div class="form-group">
+          <label for="firstname">First Name:</label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Your first name.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">Last Name:</label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Your last name.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="repassword">Re-Enter Password:</label>
+          <input
+            type="password"
+            id="repassword"
+            name="repassword"
+            placeholder="Re-type password.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <div class="radio-group">
+            <label
+              ><input
+                type="radio"
+                id="gender-male"
+                name="gender"
+                value="male"
+                required
+              />
+              Male</label
+            >
+            <label
+              ><input
+                type="radio"
+                id="gender-female"
+                name="gender"
+                value="female"
+                required
+              />
+              Female</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Your age.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Your phone number.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Your address.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input
+            type="text"
+            id="state"
+            name="state"
+            placeholder="Your state.."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <select id="country" name="country" required>
+            <option value="">Choose your country</option>
+            <option value="US">United States</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">United Kingdom</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="languages">Languages Known:</label>
+          <div class="checkbox-group">
+            <label
+              ><input
+                type="checkbox"
+                id="language-english"
+                name="language"
+                value="english"
+              />
+              English</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="language-kannada"
+                name="language"
+                value="kannada"
+              />
+              Kannada</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="language-hindi"
+                name="language"
+                value="hindi"
+              />
+              Hindi</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                id="language-telugu"
+                name="language"
+                value="telugu"
+              />
+              Telugu</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group agree-group">
+          <label>
+            <input type="checkbox" name="agree" required /> I declare all the
+            given details are true
+          </label>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
