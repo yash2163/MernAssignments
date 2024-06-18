@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #e9e9e9;
+        margin: 0;
+      }
+
+      .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #e9e9e9;
+        /* margin: 0; */
+      }
+
+      .sidenav {
+        /* padding: 0; */
+        height: 200px;
+        width: 600px;
+        overflow-x: hidden;
+        transition: 0.5s;
+      }
+
+      .sidenav button {
+        width: 80px;
+        height: 40px;
+        padding: 15px 8px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        display: block;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .sidenav button:hover {
+        width: 400px;
+      }
+
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .red {
+        background-color: red;
+      }
+      .gray {
+        background-color: grey;
+      }
+
+      .main {
+        margin-left: 60px;
+        padding: 0px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Yash Rajput</h2>
+    <div class="container">
+      <div class="sidenav">
+        <button class="green"></button>
+        <button class="blue"></button>
+        <button class="red"></button>
+        <button class="gray"></button>
+      </div>
+      <div class="main">
+        <h2>Hoverable Sidenav Buttons</h2>
+        <p>Hover over the buttons in the left side navigation to open them.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        background-color: #d1d14f;
+        border: 1px solid #c0c040;
+      }
+
+      .sidebar {
+        float: left;
+        width: 20%;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 10px;
+        margin: 5px 0;
+        font-size: 18px;
+        color: white;
+        background-color: #333;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        padding-left: 20px;
+        background-color: #111;
+      }
+
+      .content {
+        float: left;
+        width: 75%;
+        padding-left: 5%;
+      }
+
+      .content h1 {
+        color: #8034a2;
+      }
+
+      .content p {
+        color: #000;
+      }
+
+      .content i {
+        color: #666;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div class="sidebar">
+        <a href="#">Home page</a>
+        <a href="#">Musings</a>
+        <a href="#">My town</a>
+        <a href="#">Links</a>
+      </div>
+      <div class="content">
+        <h1>My first styled page</h1>
+        <p>Welcome to my styled page!</p>
+        <p>
+          It lacks images, but at least it has style. And it has links, even if
+          they don't go anywhere...
+        </p>
+        <p>There should be more here, but I don't know what yet.</p>
+        <i>Made 5 April 2004</i><br />
+        <i>by myself.</i>
+      </div>
+    </div>
+  </body>
+</html>

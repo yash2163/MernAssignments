@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethnus Layout</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .navbar-custom {
+        background-color: #00bcd4;
+      }
+      .content-area {
+        padding: 20px;
+        background-color: #f5f5f5;
+        min-height: 700px;
+      }
+      .sidebar {
+        background-color: #757575;
+        color: white;
+        padding: 20px;
+        min-height: 700px;
+      }
+      .header {
+        background-color: #bdbdbd;
+        text-align: center;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Ethnus Layout</h2>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Signup</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 content-area">
+          <p>Write your content here</p>
+        </div>
+        <div class="col-md-4 sidebar">
+          <p>This is</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

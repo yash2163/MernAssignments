@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Builderz</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .header-top {
+        background-color: #ffcd37;
+        padding: 10px 0;
+        color: black;
+      }
+      .navbarContainer {
+        display: flex;
+        background-color: #ffcd37;
+        justify-content: center;
+      }
+      .navbar {
+        width: 85%;
+      }
+      .navbar-custom {
+        background-color: #0a0b1d;
+      }
+      .hero-section {
+        position: relative;
+        height: 510px;
+        background: url("/Users/yashrajput/MernAssignments/public/bstask-2Background.avif")
+          no-repeat center center;
+        background-size: cover;
+        color: black;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      /* .hero-section .h1 .p .a {
+        background-color: black;
+      } */
+      .hero-section .btn {
+        border: 2px solid black;
+        color: black;
+      }
+      .info-section {
+        background-color: #0a0b1d;
+        color: white;
+        /* padding: 30px 0; */
+      }
+      .info-section .col {
+        padding: 20px;
+        border-right: 1px solid #fec000;
+      }
+      .info-section .col:last-child {
+        border-right: none;
+      }
+      .companyName {
+        color: #0a0b1d;
+        font-weight: bold;
+      }
+      .midCol {
+        margin: 0;
+        padding: 0;
+        background-color: #ffcd37;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Header -->
+    <div class="header-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div><h1 class="companyName">Builderz</h1></div>
+        <div>
+          <p>Opening Hour</p>
+          <p>Mon - Fri, 8:00 - 9:00</p>
+        </div>
+        <div>
+          <p>Contact Us</p>
+          <p>+012 345 6789</p>
+        </div>
+        <div>
+          <p>Mail Us</p>
+          <p>info@example.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbarContainer">
+      <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contact</a>
+              </li>
+            </ul>
+            <a class="btn btn-outline-light" href="#">Get A Quote</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1>We Are Professional</h1>
+      <p>For Your Dream Project</p>
+      <a class="btn btn-outline-light" href="#">Get A Quote</a>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="icon-placeholder" style="font-size: 2em">👷</div>
+            <h4>Expert Worker</h4>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
+              Curabitur facilisis ornare velit non.
+            </p>
+          </div>
+          <div class="col-md-4 midCol">
+            <div class="icon-placeholder" style="font-size: 2em">🔧</div>
+            <h4>Quality Work</h4>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
+              Curabitur facilisis ornare velit non.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <div class="icon-placeholder" style="font-size: 2em">📞</div>
+            <h4>24/7 Support</h4>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi.
+              Curabitur facilisis ornare velit non.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

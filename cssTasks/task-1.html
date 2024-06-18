@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        padding: 20px;
+      }
+      .task-title {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        width: 100px;
+        margin-bottom: 20px;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 10px; /* Add gaps between borders */
+        width: 100%;
+        width: 1000px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        background-color: #d0e8e8;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      .shapes-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        width: 400px;
+      }
+      .shape {
+        width: 80px;
+        height: 40px;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .shape.rectangle {
+        border-radius: 10px;
+      }
+
+      .rectangle-3,
+      .rectangle-6 {
+        border-radius: 15px;
+      }
+      .shape.ellipse {
+        border-radius: 50%;
+      }
+      .shape.special {
+        border-radius: 0 20px 0 20px;
+      }
+      .shapes-grid {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="task-title">task-1</div>
+      <table>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>80</td>
+        </tr>
+      </table>
+      <br />
+      <div class="shapes-grid">
+        <div class="shapes-container">
+          <div class="shape rectangle"></div>
+          <div class="shape rectangle"></div>
+          <div class="shape rectangle-3"></div>
+          <div class="shape rectangle"></div>
+          <div class="shape rectangle-5"></div>
+          <div class="shape rectangle-6"></div>
+          <div class="shape ellipse"></div>
+          <div class="shape rectangle-8"></div>
+          <div class="shape special"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
