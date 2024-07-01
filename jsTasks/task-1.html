@@ -2,46 +2,79 @@
 <html>
   <head>
     <title>Reverse Number</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
       body {
-        font-family: Arial, sans-serif;
-        text-align: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #847979;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
       }
 
       input[type="number"] {
-        width: 200px;
-        height: 30px;
+        width: 250px;
+        height: 40px;
         font-size: 18px;
         padding: 10px;
         margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        outline: none;
+        transition: border-color 0.3s;
+      }
+
+      input[type="number"]:focus {
+        border-color: #4caf50;
       }
 
       button {
-        background-color: #4caf50;
+        background-color: #e88564;
         color: #fff;
-        padding: 10px 20px;
+        padding: 12px 24px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s;
       }
 
       button:hover {
-        background-color: #3e8e41;
+        background-color: #45a049;
       }
 
       #result {
         font-size: 24px;
         font-weight: bold;
         margin-top: 20px;
+        color: #333;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <h1>Reverse Number</h1>
-    <input type="number" id="input-number" placeholder="Enter a number" />
-    <button id="reverse-btn">Reverse</button>
-    <p id="result"></p>
+    <div class="container">
+      <h1>Reverse Number</h1>
+      <input type="number" id="input-number" placeholder="Enter a number" />
+      <button id="reverse-btn">Reverse</button>
+      <p id="result"></p>
+    </div>
 
     <script>
       const inputNumber = document.getElementById("input-number");
