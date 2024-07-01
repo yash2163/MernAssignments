@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reverse Number</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      input[type="number"] {
+        width: 200px;
+        height: 30px;
+        font-size: 18px;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+
+      #result {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Reverse Number</h1>
+    <input type="number" id="input-number" placeholder="Enter a number" />
+    <button id="reverse-btn">Reverse</button>
+    <p id="result"></p>
+
+    <script>
+      const inputNumber = document.getElementById("input-number");
+      const reverseBtn = document.getElementById("reverse-btn");
+      const resultPara = document.getElementById("result");
+
+      reverseBtn.addEventListener("click", () => {
+        const num = parseInt(inputNumber.value);
+        if (num) {
+          const reversedNum = parseInt(
+            num.toString().split("").reverse().join("")
+          );
+          resultPara.textContent = `Reversed number: ${reversedNum}`;
+        } else {
+          resultPara.textContent = "Please enter a valid number";
+        }
+      });
+    </script>
+  </body>
+</html>
