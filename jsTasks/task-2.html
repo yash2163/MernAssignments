@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alphabetical Order</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 50px;
+      }
+
+      h1 {
+        color: #2c3e50;
+      }
+
+      #input-field {
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid #2c3e50;
+        border-radius: 5px;
+        width: 50%;
+        margin-bottom: 20px;
+      }
+
+      #submit-btn {
+        background-color: #e74c3c;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #submit-btn:hover {
+        background-color: #c0392b;
+      }
+
+      #result {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #27ae60;
+      }
+
+      #result.error {
+        color: #e74c3c;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Alphabetical Order</h1>
+    <input type="text" id="input-field" placeholder="Enter a string" />
+    <button id="submit-btn">Submit</button>
+    <p id="result"></p>
+
+    <script>
+      function alphabeticalOrder(str) {
+        return str.split("").sort().join("");
+      }
+
+      document
+        .getElementById("submit-btn")
+        .addEventListener("click", function () {
+          let inputField = document.getElementById("input-field");
+          let str = inputField.value.trim();
+          let resultPara = document.getElementById("result");
+          if (str !== "") {
+            let result = alphabeticalOrder(str);
+            resultPara.innerHTML = `Alphabetical order: ${result}`;
+            resultPara.classList.remove("error");
+          } else {
+            resultPara.innerHTML = "Please enter a string";
+            resultPara.classList.add("error");
+          }
+        });
+    </script>
+  </body>
+</html>
