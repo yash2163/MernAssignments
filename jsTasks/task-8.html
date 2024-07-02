@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration Form</h2>
+
+      <form id="registrationForm">
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="Enter your first name"
+          required
+        />
+        <span class="error" id="firstNameError"></span>
+
+        <label for="lastName">Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Enter your last name"
+          required
+        />
+        <span class="error" id="lastNameError"></span>
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+        <span class="error" id="emailError"></span>
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+        <span class="error" id="passwordError"></span>
+
+        <label for="confirmPassword">Re-enter Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Re-enter your password"
+          required
+        />
+        <span class="error" id="confirmPasswordError"></span>
+
+        <label for="gender">Gender:</label><br />
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label><br />
+        <span class="error" id="genderError"></span>
+
+        <label for="age">Age:</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="Enter your age"
+          required
+        />
+        <span class="error" id="ageError"></span>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input
+          type="text"
+          id="phoneNumber"
+          name="phoneNumber"
+          placeholder="Enter your phone number"
+          required
+        />
+        <span class="error" id="phoneNumberError"></span>
+
+        <label for="address">Address:</label>
+        <textarea
+          id="address"
+          name="address"
+          placeholder="Enter your address"
+          required
+        ></textarea>
+        <span class="error" id="addressError"></span>
+
+        <label for="state">State:</label>
+        <input
+          type="text"
+          id="state"
+          name="state"
+          placeholder="Enter your state"
+          required
+        />
+        <span class="error" id="stateError"></span>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Choose your country</option>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="UK">UK</option>
+          <option value="Canada">Canada</option>
+        </select>
+        <span class="error" id="countryError"></span>
+
+        <label for="languages">Languages known:</label>
+        <input type="checkbox" id="english" name="languages" value="English" />
+        <label for="english">English</label>
+        <input type="checkbox" id="kannada" name="languages" value="Kannada" />
+        <label for="kannada">Kannada</label>
+        <input type="checkbox" id="hindi" name="languages" value="Hindi" />
+        <label for="hindi">Hindi</label>
+        <input type="checkbox" id="telugu" name="languages" value="Telugu" />
+        <label for="telugu">Telugu</label>
+
+        <label for="secondNumber">Second Number:</label>
+        <input
+          type="number"
+          id="secondNumber"
+          name="secondNumber"
+          placeholder="Enter the second number"
+          required
+        />
+        <span class="error" id="secondNumberError"></span>
+
+        <input type="checkbox" id="agree" name="agree" required />
+        <label for="agree"
+          >Hereby I declare all the given details are true</label
+        >
+        <span class="error" id="agreeError"></span>
+
+        <button type="submit">REGISTER</button>
+      </form>
+
+      <p id="result"></p>
+      <p>Log in to <a href="#">Ethnus</a> website</p>
+    </div>
+
+    <script>
+      const registrationForm = document.getElementById("registrationForm");
+      const firstNameInput = document.getElementById("firstName");
+      const lastNameInput = document.getElementById("lastName");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+      const genderInputs = document.querySelectorAll('input[name="gender"]');
+      const ageInput = document.getElementById("age");
+      const phoneNumberInput = document.getElementById("phoneNumber");
+      const addressInput = document.getElementById("address");
+      const stateInput = document.getElementById("state");
+      const countryInput = document.getElementById("country");
+      const secondNumberInput = document.getElementById("secondNumber");
+      const agreeCheckbox = document.getElementById("agree");
+
+      const firstNameError = document.getElementById("firstNameError");
+      const lastNameError = document.getElementById("lastNameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+      const confirmPasswordError = document.getElementById(
+        "confirmPasswordError"
+      );
+      const genderError = document.getElementById("genderError");
+      const ageError = document.getElementById("ageError");
+      const phoneNumberError = document.getElementById("phoneNumberError");
+      const addressError = document.getElementById("addressError");
+      const stateError = document.getElementById("stateError");
+      const countryError = document.getElementById("countryError");
+      const secondNumberError = document.getElementById("secondNumberError");
+      const agreeError = document.getElementById("agreeError");
+
+      const resultParagraph = document.getElementById("result");
+
+      registrationForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let isValid = true;
+
+        if (firstNameInput.value.trim() === "") {
+          firstNameError.textContent = "Please enter your first name.";
+          isValid = false;
+        } else {
+          firstNameError.textContent = "";
+        }
+
+        if (lastNameInput.value.trim() === "") {
+          lastNameError.textContent = "Please enter your last name.";
+          isValid = false;
+        } else {
+          lastNameError.textContent = "";
+        }
+
+        if (emailInput.value.trim() === "") {
+          emailError.textContent = "Please enter your email address.";
+          isValid = false;
+        } else if (!validateEmail(emailInput.value)) {
+          emailError.textContent = "Please enter a valid email address.";
+          isValid = false;
+        } else {
+          emailError.textContent = "";
+        }
+
+        if (passwordInput.value.trim() === "") {
+          passwordError.textContent = "Please enter your password.";
+          isValid = false;
+        } else {
+          passwordError.textContent = "";
+        }
+
+        if (confirmPasswordInput.value.trim() === "") {
+          confirmPasswordError.textContent = "Please re-enter your password.";
+          isValid = false;
+        } else if (passwordInput.value !== confirmPasswordInput.value) {
+          confirmPasswordError.textContent =
+            "Passwords do not match. Please try again.";
+          isValid = false;
+        } else {
+          confirmPasswordError.textContent = "";
+        }
+
+        let genderSelected = false;
+        genderInputs.forEach((input) => {
+          if (input.checked) {
+            genderSelected = true;
+          }
+        });
+        if (!genderSelected) {
+          genderError.textContent = "Please select your gender.";
+          isValid = false;
+        } else {
+          genderError.textContent = "";
+        }
+
+        if (ageInput.value.trim() === "") {
+          ageError.textContent = "Please enter your age.";
+          isValid = false;
+        } else if (isNaN(ageInput.value) || ageInput.value <= 0) {
+          ageError.textContent = "Please enter a valid age.";
+          isValid = false;
+        } else {
+          ageError.textContent = "";
+        }
+
+        if (phoneNumberInput.value.trim() === "") {
+          phoneNumberError.textContent = "Please enter your phone number.";
+          isValid = false;
+        } else {
+          phoneNumberError.textContent = "";
+        }
+
+        if (addressInput.value.trim() === "") {
+          addressError.textContent = "Please enter your address.";
+          isValid = false;
+        } else {
+          addressError.textContent = "";
+        }
+
+        if (stateInput.value.trim() === "") {
+          stateError.textContent = "Please enter your state.";
+          isValid = false;
+        } else {
+          stateError.textContent = "";
+        }
+
+        if (countryInput.value === "") {
+          countryError.textContent = "Please select your country.";
+          isValid = false;
+        } else {
+          countryError.textContent = "";
+        }
+
+        if (secondNumberInput.value.trim() === "") {
+          secondNumberError.textContent = "Please enter the second number.";
+          isValid = false;
+        } else if (isNaN(secondNumberInput.value)) {
+          secondNumberError.textContent = "Please enter a valid number.";
+          isValid = false;
+        } else {
+          secondNumberError.textContent = "";
+        }
+
+        if (!agreeCheckbox.checked) {
+          agreeError.textContent = "You must agree to the declaration.";
+          isValid = false;
+        } else {
+          agreeError.textContent = "";
+        }
+
+        if (isValid) {
+          resultParagraph.textContent = "Registration Successful!";
+        } else {
+          resultParagraph.textContent =
+            "Please fill out all required fields correctly.";
+        }
+      });
+
+      function validateEmail(email) {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      }
+    </script>
+  </body>
+</html>
