@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Date and Time</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+      }
+
+      .button {
+        background-color: #3498db;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .button:hover {
+        background-color: #2980b9;
+      }
+
+      .result {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #27ae60;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Show Date and Time</h1>
+    <button class="button" onclick="showDate()">Show Date</button>
+    <p id="date" class="result"></p>
+
+    <button class="button" onclick="showTime()">Show Time</button>
+    <p id="time" class="result"></p>
+
+    <script>
+      function showDate() {
+        var date = new Date();
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        document.getElementById("date").innerHTML =
+          day + "/" + month + "/" + year;
+      }
+
+      function showTime() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        var ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        var strTime = hours + ":" + minutes + ":" + seconds + " " + ampm;
+        document.getElementById("time").innerHTML = strTime;
+      }
+    </script>
+  </body>
+</html>
