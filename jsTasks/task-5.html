@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        color: #3498db;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+
+      textarea {
+        min-height: 100px;
+      }
+
+      button {
+        background-color: #3498db;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Contact Us</h1>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <div class="error" id="name-error"></div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <div class="error" id="email-error"></div>
+
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website" required />
+        <div class="error" id="website-error"></div>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <div class="error" id="message-error"></div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("contact-form");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const websiteInput = document.getElementById("website");
+      const messageInput = document.getElementById("message");
+      const nameError = document.getElementById("name-error");
+      const emailError = document.getElementById("email-error");
+      const websiteError = document.getElementById("website-error");
+      const messageError = document.getElementById("message-error");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let isValid = true;
+
+        if (nameInput.value === "") {
+          nameError.textContent = "This field is required";
+          isValid = false;
+        } else {
+          nameError.textContent = "";
+        }
+
+        if (emailInput.value === "") {
+          emailError.textContent = "This field is required";
+          isValid = false;
+        } else if (!validateEmail(emailInput.value)) {
+          emailError.textContent = "A valid email address is required";
+          isValid = false;
+        } else {
+          emailError.textContent = "";
+        }
+
+        if (websiteInput.value === "") {
+          websiteError.textContent = "This field is required";
+          isValid = false;
+        } else if (!validateURL(websiteInput.value)) {
+          websiteError.textContent = "A valid URL is required";
+          isValid = false;
+        } else {
+          websiteError.textContent = "";
+        }
+
+        if (messageInput.value === "") {
+          messageError.textContent = "This field is required";
+          isValid = false;
+        } else {
+          messageError.textContent = "";
+        }
+
+        if (isValid) {
+          alert("Form submitted successfully!");
+          form.reset();
+        }
+      });
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      function validateURL(url) {
+        const re =
+          /^(?:(?:https?|ftp):\/\/)?(?:[\w-]+\.?)+(?:\.[a-z]{2,})?(?:\/[^\s]*)?$/i;
+        return re.test(url);
+      }
+    </script>
+  </body>
+</html>
